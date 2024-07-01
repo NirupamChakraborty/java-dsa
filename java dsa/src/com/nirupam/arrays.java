@@ -26,7 +26,15 @@ public class arrays {
         int[] rollno2 = {55,66,77,88,99};
 
         //arrays take input of only same data type if its int then all entries will be int
-        
+
+         int [] roll ; // declaration of array, here ros is getting defined in the stack
+
+        roll = new int[5]; // initialisation of arrray, object is created, memory is being allocated
+        System.out.println(rollno2[1]);
+
+        String [] arr = new String[5];
+        System.out.println(arr[0]);
+
 
 
     }
