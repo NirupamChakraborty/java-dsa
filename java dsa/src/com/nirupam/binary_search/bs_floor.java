@@ -1,16 +1,18 @@
 package com.nirupam.binary_search;
 
-public class Binary_search_1 {
+public class bs_floor {
     public static void main(String[] args) {
-        int[] arr = {1,3,5,7,9,55,38,37,-2,99,95,90,105};
-        int target = 99;
+        int[] arr = {2,3,5,7,9,14,16,99};
+        int target = 15;
         int ans = binarySearch(arr, target);
         System.out.println(ans);
 
     }
-//    return the index of the element
+    //    return the index of the greatest no. <= target
 //    return -1 if the element does not exist
-      static int binarySearch(int[] arr, int target){
+    static int binarySearch(int[] arr, int target){
+
+
         int start = 0;
         int end = arr.length - 1 ;
 
@@ -29,7 +31,8 @@ public class Binary_search_1 {
                 return mid;
             }
         }
-        return -1;
-      }
+        return end;
+    }
 
 }
+
