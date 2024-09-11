@@ -5,12 +5,29 @@ import java.util.Arrays;
 
 public class bubble_sort {
     public static void main (String[] args) {
-        int[] arr ={1,2,4,5,3,9};
-        selectionSort(arr);
+        int[] arr ={1,2,4,58,3,99,9};
+//        selectionSort(arr);
 //        bubbleSort(arr);
+        insertionSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }
+    // INSERTION SORT
+    static void insertionSort(int[] arr){
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i+1; j > 0; j--) {
+                if (arr[j] < arr[j-1]) {
+                    swap(arr, j, j-1);
+                }
+                else{
+                    break;
+                }
+            }
+
+        }
+    }
+//     .................................................
+
     // SELECTION SORT
     static void selectionSort(int[] arr){
         for (int i = 0; i < arr.length; i++) {
