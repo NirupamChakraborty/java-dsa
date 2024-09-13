@@ -5,13 +5,31 @@ import java.util.Arrays;
 
 public class bubble_sort {
     public static void main (String[] args) {
-        int[] arr ={1,2,4,58,3,99,9};
+        int[] arr ={3,5,2,1,4};
 //        selectionSort(arr);
 //        bubbleSort(arr);
-        insertionSort(arr);
+//        insertionSort(arr);
+        cyclicSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }
+//    CYCLIC SORT
+
+    static void cyclicSort(int[] arr){
+        int i = 0;
+        while(i < arr.length){
+            int correct = arr[i] - 1; // as correct index of element 3 is 2
+             if (arr[i] != arr[correct]){
+                 swap(arr, i, correct);
+             }else {
+                 i++;
+             }
+        }
+    }
+
+
+
+//    .........................................
     // INSERTION SORT
     static void insertionSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
